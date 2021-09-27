@@ -1,0 +1,30 @@
+set number
+syntax on
+colorscheme elflord
+set tabstop=4
+set expandtab
+let w:m80=matchadd('ErrorMsg', '\%>80v.\+', -1)
+set textwidth=80
+
+set nocompatible 
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" put all of your plugins here
+Plugin 'Syntastic'
+" The NERDTree is a file system explorer "
+Plugin 'scrooloose/nerdtree'
+" Airline is a lean & mean status/tabline "
+Plugin 'bling/vim-airline'
+" auto complete feature "
+Plugin 'ycm-core/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
